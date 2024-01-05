@@ -10,6 +10,12 @@ header {
     color: #fff;
     text-align: center;
     padding: 10px;
+    text-shadow:
+      1px 1px 2px black, 0 0 1em #0ce6e2, 0 0 0.2em #13ede9;
+    font:
+      1.5em Georgia,
+      serif;
+    margin-bottom: 50px;
 }
 
 main {
@@ -24,18 +30,27 @@ footer {
     position: fixed;
     bottom: 0;
     width: 100%;
+    text-shadow:
+      1px 1px 2px black, 0 0 1em #0ce6e2, 0 0 0.2em #13ede9;
 }
 
 .user-list {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: center;
+    margin-bottom: 80px;
+    column-gap: 20px;
+    row-gap: 40px;
 }
 
 .user {
     margin: 10px;
+    padding: 10px;
     text-align: center;
     cursor: pointer;
+    width: calc((100% - 100px) / 6);
+    border: 2px solid #1ae1de;
+    box-shadow: 5px 5px 10px 5px #888888ad;
 }
 
 .user img {
@@ -44,19 +59,29 @@ footer {
     border-radius: 50%;
     margin-bottom: 10px;
 }
+#user-info {
+    display: flex;
+    justify-content: center;
+}
+#user-info .user {
+    width: 50%;
+}
 .slider {
     display: flex;
     overflow-x: auto;
     scroll-snap-type: x mandatory;
-    white-space: nowrap;
+    white-space: break-spaces;
+    margin-bottom: 50px;
 }
 
 .post {
-    flex: 0 0 100%;
-    margin-right: 10px; /* Відступ між слайдами */
+    flex: 0 0 30%;
+    margin-right: 20px; /* Відступ між слайдами */
     scroll-snap-align: start;
     border: 1px solid #ddd;
-    padding: 10px;
+    background-color: #06d9c552;
+    box-shadow: 5px 5px 10px #888888;
+    padding: 20px;
 }
 
 
