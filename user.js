@@ -1,10 +1,8 @@
 
 document.addEventListener("DOMContentLoaded", function () {
-  // Get user ID from the URL
   const urlParams = new URLSearchParams(window.location.search);
   const userId = urlParams.get("userId");
 
-  // Fetch user data based on the user ID
   fetch(`https://jsonplaceholder.typicode.com/users/${userId}`)
     .then((response) => response.json())
     .then((user) => {
@@ -17,7 +15,6 @@ document.addEventListener("DOMContentLoaded", function () {
                 <p><strong>Email:</strong> ${user.email}</p>
                 <p><strong>Phone:</strong> ${user.phone}</p>
                 <p><strong>Website:</strong> ${user.website}</p>
-                <!-- Add more user details as needed -->
             `;
 
       userInfo.appendChild(userElement);
